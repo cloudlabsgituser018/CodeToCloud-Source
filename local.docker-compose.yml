@@ -10,4 +10,10 @@ services:
     depends_on:
       - mongo
     environment:
-      MONGODB_CONNECTION: mongodb://mongo:27017/contentdb    
+      MONGODB_CONNECTION: mongodb://mongo:27017/contentdb 
+
+        - "3000:80" 
+
+  web:
+    build: ./content-web
+    image: local-fabrikam-web
